@@ -4,11 +4,30 @@
   "description": "Generates dmdoc proc comments automatically",
   "version": "0.0.1",
   "publisher": "farie82",
+  "license": "SEE LICENSE IN LICENSE",
   "engines": {
     "vscode": "^1.72.0"
   },
+  "repository": {
+      "type": "git",
+      "url": "https://github.com/farie82/auto-dmdoc"
+  },
+  "bugs": {
+      "url": "https://github.com/farie82/auto-dmdoc/issues"
+  },
   "categories": [
-    "Other"
+    "Snippets",
+    "Formatters",
+    "Programming Languages"
+  ],
+  "keywords": [
+    "dm",
+    "byond",
+    "autodoc",
+    "dmdoc",
+    "autocomment",
+    "generation",
+    "dream maker"
   ],
   "activationEvents": [
     "onLanguage:dm"
