@@ -16,9 +16,6 @@ export class AutoDmDoc {
 
 		const position = this.editor.selection.active;
 
-
-		const parameterRegex: RegExp = /\((.*)\)/;
-
 		const procLine = this.getFullProc(position.line + 1, this.editor.document);
 
 		if (!procLine) {
@@ -27,6 +24,7 @@ export class AutoDmDoc {
 			return;
 		}
 
+		const parameterRegex: RegExp = /\((.*)\)/;
 		const paramBody = procLine.match(parameterRegex)!;
 
 		const argNames = this.getArgs(paramBody);
@@ -66,7 +64,7 @@ export class AutoDmDoc {
 	}
 
 	private getArgs(paramBody: string | RegExpMatchArray) {
-		const argumentsRegex: RegExp = /[^\s,]+/g;
+		const argumentsRegex: RegExp = /[A-Za-z_][^\s,=]*/g;
 		const argNameRegex: RegExp = /[^\/]+$/
 		const argValues = paramBody[1].match(argumentsRegex);
 		let argNames: string[] = [];
