@@ -2,7 +2,7 @@
   "name": "auto-dmdoc",
   "displayName": "auto dmdoc",
   "description": "Generates dmdoc proc comments automatically",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "publisher": "farie82",
   "license": "SEE LICENSE IN LICENSE",
   "engines": {
